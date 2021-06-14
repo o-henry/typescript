@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import {
+  ask,
+  parse,
+  InvalidDateFormatError,
+  DateIsInTheFutureError,
+} from './typescript';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+  React.useEffect(() => {
+    try {
+      let date = parse(ask() as string);
+      if (date) {
+        console.info('Date is', date.toISOString());
+      }
+    } catch (e) {
+      // if (e instanceof RangeError) {
+      //   console.error(e.message);
+      // } else {
+      //   throw e;
+      // }
+      if (e instanceof InvalidDateFormatError) {
+        console.error(e.message);
+      } else if (e instanceof DateIsInTheFutureError) {
+        console.info(e.message);
+      } else {
+        throw e;
+      }
+    }
+  }, []);
+
+  return <div className="App"></div>;
 }
-
-export default App;

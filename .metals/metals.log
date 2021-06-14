@@ -1,0 +1,45 @@
+[0m2021.06.14 16:22:32 INFO  Started: Metals version 0.10.4 in workspace '/Users/henry/Documents/code/programming-typescript' for client Visual Studio Code 1.57.0.[0m
+[0m2021.06.14 16:22:35 INFO  time: initialize in 3.05s[0m
+[0m2021.06.14 16:22:35 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.14 16:22:35 WARN  no build tool detected in workspace '/Users/henry/Documents/code/programming-typescript'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+6월 14, 2021 4:22:44 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:22:48 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:13 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:21 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:33 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:38 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:44 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:49 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:51 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:54 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:57 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:23:59 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:24:02 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:24:04 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:24:06 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:24:49 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:25:04 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:25:08 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:25:15 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+6월 14, 2021 4:28:23 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+[0m2021.06.14 16:30:22 INFO  shutting down Metals[0m
