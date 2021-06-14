@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 function ask() {
   return prompt('When is your birthday?');
 }
@@ -9,7 +11,11 @@ function isValid(date: Date) {
   );
 }
 
-// custom error type
+/*
+ * custom error type
+ * @throws { InvalidDateFormatError } 사용자가 생일을 잘못 입력함
+ * @throws { DateIsInTheFutureError } 사용자가 생일을 미래 날짜로 입력함.
+ */
 class InvalidDateFormatError extends RangeError {}
 class DateIsInTheFutureError extends RangeError {}
 
@@ -27,4 +33,25 @@ function parse(birthday: string): Date | null {
   return date;
 }
 
-export { ask, parse, InvalidDateFormatError, DateIsInTheFutureError };
+function HandleError() {
+  React.useEffect(() => {
+    try {
+      let date = parse(ask() as string);
+      if (date) {
+        console.info('Date is', date.toISOString());
+      }
+    } catch (e) {
+      if (e instanceof InvalidDateFormatError) {
+        console.error(e.message);
+      } else if (e instanceof DateIsInTheFutureError) {
+        console.info(e.message);
+      } else {
+        throw e;
+      }
+    }
+  }, []);
+
+  return <></>;
+}
+
+export { HandleError };
