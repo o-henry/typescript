@@ -1,4 +1,4 @@
-# Programming-typescript
+# programming-typescript
 
 by Boris cherny
  
