@@ -1,5 +1,6 @@
 // https://www.typescriptlang.org/docs/handbook/2/narrowing.html
 // Narrowing
+// union type에 따라오는 특징
 
 export {};
 // null-checks
@@ -35,7 +36,7 @@ function printName(obj: { first: string; last?: string }) {
 // Union Type
 function printId(id: number | string) {
   console.log(id.toUpperCase());
-  // Property 'toUpperCase' does not exist on type 'string | number'.
+  //             ------------ Property 'toUpperCase' does not exist on type 'string | number'.
 }
 
 function printId(id: number | string) {
@@ -53,4 +54,30 @@ function padLeft(padding: number | string, input: string): string {
     return new Array(padding + 1).join(' ') + input;
   }
   return padding + input;
+}
+
+/* Truthiness narrowing */
+// 거짓 판별이 되는 value => 0, NaN, "", 0n, null, undefined
+
+// interface Shape {
+//   kind: 'crcle' | 'squre';
+//   radius?: number; // number | undefined
+//   sideLength?: number; // number | undefined
+// }
+
+/* Discriminated unions */
+interface Circle {
+  kind: 'circle';
+  radius: number;
+}
+
+interface Square {
+  kind: 'square';
+  sideLength: number;
+}
+
+type Shape = Circle | Square;
+
+function getLength(shape: Shape) {
+  if (shape.kind === 'circle') return Math.PI * shape.radius ** 2;
 }
