@@ -66,6 +66,7 @@ function padLeft(padding: number | string, input: string): string {
 // }
 
 /* Discriminated unions */
+
 interface Circle {
   kind: 'circle';
   radius: number;
