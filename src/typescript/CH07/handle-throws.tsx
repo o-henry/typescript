@@ -15,6 +15,7 @@ function isValid(date: Date) {
  * custom error type
  * @throws { InvalidDateFormatError } 사용자가 생일을 잘못 입력함
  * @throws { DateIsInTheFutureError } 사용자가 생일을 미래 날짜로 입력함.
+ *
  * consumer need to handle three situation.
  */
 class InvalidDateFormatError extends RangeError {}

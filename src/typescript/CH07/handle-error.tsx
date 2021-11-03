@@ -11,7 +11,7 @@ function isValid(date: Date) {
   );
 }
 
-/*
+/**
  * custom error type
  * @throws { InvalidDateFormatError } 사용자가 생일을 잘못 입력함
  * @throws { DateIsInTheFutureError } 사용자가 생일을 미래 날짜로 입력함.
@@ -23,13 +23,16 @@ function parse(birthday: string): Date | null {
   let date = new Date(birthday);
 
   if (!isValid(date)) {
+    // return null
     // null 대신 예외를 던져, 디버깅에 도움이 되는 메타데이터를 반환한다.
     // throw new RangeError('Enter a date in the form YYYY/MM/DD');
     throw new InvalidDateFormatError('Enter a date in the form YYYY/MM/DD');
   }
+
   if (date.getTime() > Date.now()) {
     throw new DateIsInTheFutureError('Are you a timelord?');
   }
+
   return date;
 }
 
@@ -46,7 +49,7 @@ function HandleError() {
       } else if (e instanceof DateIsInTheFutureError) {
         console.info(e.message);
       } else {
-        throw e;
+        throw e; // 다른 에러를 무시하지 않도록 처리
       }
     }
   }, []);
