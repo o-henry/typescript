@@ -1,5 +1,3 @@
-class Game {}
-
 // piece have color and position
 // 색，랭크, 파일의 종류가 많지 않으므로 가질 수 있는 모든 값을 타입 리터럴로 직접 열거할 수 있다.
 // 타입 안전성 확보
@@ -8,7 +6,7 @@ type File = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H';
 type Rank = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
 abstract class Piece {
-  //____ : Piece 클래스를 상속받은 클래스를 통해서만 인스턴스화할 수 있도록 허용한다.
+  //____ : 추상화를 통해 Piece 클래스를 상속받은 클래스를 통해서만 인스턴스화할 수 있도록 허용한다.
   protected position: Position;
   //        ________ : protected도 private 처럼 프로퍼티를 this에 할당하지만, private과 달리
   // Piece의 인스턴스와 서브클래스 인스턴스 모두에 접근을 허용한다.
@@ -53,24 +51,14 @@ class King extends Piece {
 class Game {
   private pieces = Game.makePieces();
   private static makePieces() {
-    return [
-      new King('White', 'E', 1),
-      new King('Black', 'E', 8),
-
-      new Queen('White', 'D', 1),
-      new Queen('Black', 'D', 8),
-
-      new Bishop('White', 'C', 1),
-      new Bishop('White', 'F', 1),
-      new Bishop('Black', 'C', 8),
-      new Bishop('Black', 'F', 8),
-    ];
+    return [new King('White', 'E', 1), new King('Black', 'E', 8)];
   }
 }
 
 export {};
 
 /**
+ * public = 어디에서나 접근 가능, 기본적으로 주어지는 접근 수준이다.
  * protected = 이 클래스와 서브클래스의 인스턴스에서만 접근 가능.
  * private = 이 클래스의 인스턴스에서만 접근 가능.
  * 접근 한정자를 이용해 내부 구현 정보를 너무 많이 공개하지 않고 잘 정의된 API만 노출하도록 클래스를 설계할 수 있다.
