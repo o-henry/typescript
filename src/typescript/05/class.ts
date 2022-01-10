@@ -24,7 +24,7 @@ abstract class Piece {
 
 class Position {
   constructor(private file: File, private rank: Rank) {
-    //       _______ : 자동으로 매개변수를 this에 할당한다.
+    // private : 자동으로 매개변수를 this에 할당한다.
   }
 
   distanceFrom(position: Position) {
@@ -51,7 +51,11 @@ class King extends Piece {
 class Game {
   private pieces = Game.makePieces();
   private static makePieces() {
-    return [new King('White', 'E', 1), new King('Black', 'E', 8)];
+    return [
+      new King('White', 'E', 1),
+      new King('Black', 'E', 8),
+      // ...
+    ];
   }
 }
 
